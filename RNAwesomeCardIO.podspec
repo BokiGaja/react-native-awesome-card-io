@@ -2,6 +2,7 @@ require 'json'
 package = JSON.parse(File.read('package.json'))
 
 Pod::Spec.new do |s|
+  s.static_framework = true
   s.name             = "RNAwesomeCardIO"
   s.version          = package["version"]
   s.summary          = package["description"]
